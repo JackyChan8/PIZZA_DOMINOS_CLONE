@@ -1,0 +1,158 @@
+{% extends "base/base.html" %}
+{% block title %}Order Pizza Online for Carryout &amp; Delivery - Domino's Pizza{% endblock title %}
+
+{% block content %}
+    <div id="pageContent"
+         class="js-contentWrap content-wrap skeleton__content content-wrap--full-header content-wrap--homepage">
+        <div class="progress-bar"></div>
+        <div id="homeWrapper" class="js-homeWrapper homepage-wrapper is-anon">
+            <div class="header--homepage card--flat is-hidden@desktop">
+                <div class="media media--store-notification js-store-notification is-hidden"><p
+                        class="media media--store-notification__text">You have selected undefined for carryout order.</p>
+                    <p class="media media--store-notification__text media--store-notification__text--right"><a href=""
+                                                                                                               class="media--store-notification__text--link">Change
+                        my store</a></p></div>
+                <h1 class="welcome-title js-welcome-title">Welcome to Domino's!</h1>
+                <div class="direction-phone is-hidden@desktop"></div>
+                <ul class="nav--buttons grid js-navButtonsTop">
+                    <li class="grid__cell--1 js-mobileNav0"><a href="./order_online/index.html"
+                                                               class="btn btn--block js-responsiveBtnWt btn--block--flatstyle qa-Cl_order">
+                        Order Online </a></li>
+                </ul>
+            </div>
+            <section role="region"
+                     class="home-section home-section--start-order home-section--start-order-desktop js-smartOrder is-hidden is-visible@desktop">
+                <div class="smart-order" data-quid="start-your-order-content">
+                    <div class="smart-order__heading"><h1 class="smart-order__heading-text">Start Your Order</h1></div>
+                    <div class="smart-order__ctas">
+                        <div class="smart-order__cta-container"><a class="btn smart-order__cta smart-order__cta--color"
+                                                                   href="{% url 'order_online' %}?type=Delivery"
+                                                                   data-method="Delivery"
+                                                                   data-quid="start-your-order-delivery">Delivery</a></div>
+                        <span class="smart-order__or">or</span>
+                        <div class="smart-order__cta-container"><a class="btn smart-order__cta smart-order__cta--color"
+                                                                   href="{% url 'order_online' %}?type=Carryout"
+                                                                   data-method="Carryout"
+                                                                   data-quid="start-your-order-carryout">Carryout</a></div>
+                    </div>
+                </div>
+            </section>
+            <section role="region" class="js-orderSettings is-hidden@handheld"></section>
+            <div role="main" id="homePage" class="grid home-touts" data-dpz-track-group="coupons-banners">
+                <div class="start-your-order--handheld start-your-order--handheld-profile grid__cell--1 is-hidden@desktop"
+                     data-quid="start-your-order-top">
+                    <div id="startYourOrderHandheldProfile" class="js-startYourOrderHandheldTop"> <!-- --> </div>
+                </div>
+                <div class="grid__cell--1 home-touts__main" id="sectionMain">
+                    <div id="orderHistoryContainer" class="js-orderHistoryContainer order-history-container">
+                        <div id="orderHistory" class="js-orderHistory order-history"></div>
+                        <div id="localStore" class="js-localStore is-hidden"></div>
+                    </div>
+                    <div class="block block0" data-number="0" data-image-type="hero" data-quid="block0">
+                        <div class="tile__77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-1-anonymous home-touts__tile home-touts__tile--wam">
+                            <a class="js-coupon" href="{% url 'order_online' %}?type=Delivery">
+                                <img
+                                    src="https://cache.dominos.com/wam/prod/market/AW/_en/images/promo/6ca9d0fd-48eb-4469-927a-bcb3f24c4929.png"
+                                    alt="July Special with Dominos!"
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <aside id="asideMain" class="grid__cell--1 home-touts__aside ">
+                    <svg aria-hidden="true" class="promo__price__filter" focusable="false" viewBox="0 0 0 0"
+                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <filter id="price-stroke">
+                            <feMorphology in="SourceGraphic" operator="dilate" radius="2" result="expand"></feMorphology>
+                            <feFlood flood-color="#e31837"></feFlood>
+                            <feComposite in2="expand" operator="in" result="expand"></feComposite>
+                            <feMerge>
+                                <feMergeNode in="expand"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </svg>
+                    <div class="block block1" data-number="1" data-image-type="side" data-quid="block1">
+                        <div class="tile__77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-2-anonymous home-touts__tile home-touts__tile--wam">
+                            <a class=" js-coupon" href="{% url 'order_online' %}?type=Delivery"
+                               data-dpz-segment-track-event-name="Promotion Clicked"
+                               data-dpz-segment-track-promotion_id="77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-2-anonymous"
+                               data-dpz-segment-track-position="block1"
+                               data-dpz-segment-track-name="Enjoy our delicious Desserts data-dpz-segment-track-creative="
+                               77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-2-anonymous_side_block1"=""
+                            data-dpz-track-evt-name="77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-2-anonymous_side_block1_image"
+                            data-wt-panelnumber="" data-wt-panelname="" data-couponcode="" data-uri="" data-group=""
+                            data-subgroup="" data-quid=""> <img
+                                src="https://cache.dominos.com/wam/prod/market/AW/_en/images/promo/bab1b706-3e1c-4de3-a32e-bec655ec6506.png"
+                                alt="Enjoy our delicious Desserts">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="block block2" data-number="2" data-image-type="side" data-quid="block2">
+                        <div class="tile__77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-3-anonymous home-touts__tile home-touts__tile--wam">
+                            <a class=" js-coupon" href="{% url 'coupons' %}"
+                               data-dpz-segment-track-event-name="Promotion Clicked"
+                               data-dpz-segment-track-promotion_id="77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-3-anonymous"
+                               data-dpz-segment-track-position="block2"
+                               data-dpz-segment-track-name="Every day we offer you the best option... data-dpz-segment-track-creative="
+                               77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-3-anonymous_side_block2"=""
+                            data-dpz-track-evt-name="77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-3-anonymous_side_block2_image"
+                            data-wt-panelnumber="" data-wt-panelname="" data-couponcode="" data-uri="" data-group=""
+                            data-subgroup="" data-quid=""> <img
+                                src="https://cache.dominos.com/wam/prod/market/AW/_en/images/promo/80aa8ee3-c458-476c-9904-d579d2921acd.png"
+                                alt="Every day we offer you the best option...">   </a> </div>
+                    </div>
+                    <div class="block block3" data-number="3" data-image-type="side" data-quid="block3"></div>
+                    <div class="block block4" data-number="4" data-image-type="side" data-quid="block4"></div>
+                    <div class="block block5" data-number="5" data-image-type="side" data-quid="block5"></div>
+                    <div class="block block6" data-number="6" data-image-type="side" data-quid="block6"></div>
+                </aside>
+                <footer id="footerMain" class="grid__cell home-touts__bottom js-home-touts__bottom is-hidden"
+                        style="display: block;">
+                    <div class="block block7" data-number="7" data-image-type="footer" style="">
+                        <div class="tile__77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-4-anonymous home-touts__tile home-touts__tile--wam">
+                            <a class=" js-coupon"
+                               href="{% url 'order_online' %}?type=Delivery"
+                               data-dpz-segment-track-event-name="Promotion Clicked"
+                               data-dpz-segment-track-promotion_id="77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-4-anonymous"
+                               data-dpz-segment-track-position="block7"
+                               data-dpz-segment-track-name="The 2022 has come with more delicious options! data-dpz-segment-track-creative="
+                               77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-4-anonymous_footer_block7"=""
+                            data-dpz-track-evt-name="77236-ec-8-5-f-09-4-a-1-d-814-e-defb-5-e-1-d-2-e-78-4-anonymous_footer_block7_image"
+                            data-wt-panelnumber="" data-wt-panelname="" data-couponcode="" data-uri="" data-group=""
+                            data-subgroup="" data-quid=""> <img
+                                src="https://cache.dominos.com/wam/prod/market/AW/_en/images/promo/eccba928-433b-4532-902b-cd337bc2ff4b.png"
+                                alt="The 2022 has come with more delicious options!">   </a> </div>
+                    </div>
+                    <div class="block block8 is-hidden" data-number="8" data-image-type="footer"
+                         style="display: none;"></div>
+                    <div class="block block9 is-hidden" data-number="9" data-image-type="footer"
+                         style="display: none;"></div>
+                    <div class="js-deliveryTimeOrder" data-number="10"></div>
+                    <div class="block block11 is-hidden" data-number="11" data-image-type="footer"
+                         style="display: none;"></div>
+                    <ul class="nav--buttons grid is-hidden@desktop js-navButtonsBottom">
+                        <li class="grid__cell--1"><a id="menuLinkSeeAll2"
+                                                     class="btn btn--block c-site-nav-main-link-0-mobile js-responsiveBtnWt btn--block--flatstyle qa-Cl_Menu">
+                            Menu </a></li>
+                        <li class="grid__cell--1"><a href="./coupon/index.html"
+                                                     class="btn btn--block c-site-nav-main-link-1-mobile js-responsiveBtnWt btn--block--flatstyle navigation-coupons js-couponPageNavigation">
+                            Coupons </a></li>
+                        <li class="grid__cell--1"><a href="./tracker/index.html"
+                                                     class="btn btn--block c-site-nav-main-link-2-mobile js-responsiveBtnWt btn--block--flatstyle qa-Cl_Loc">
+                            Tracker </a></li>
+                    </ul>
+                </footer>
+                <div class="start-your-order--handheld grid start-your-order--bottom is-hidden@desktop"
+                     data-quid="start-your-order-bottom">
+                    <div id="startYourOrderHandheldGuest" class="js-startYourOrderHandheldBottom grid__cell--1">
+                        <!-- --> </div>
+                </div>
+            </div>
+            <div class="kiosk-privacy-link is-hidden is-visible@kiosk"><a class="js-isTemplatePopup buttonType3"
+                                                                          data-template-popup="contentPagePrivacy" href="#">Privacy
+                Policy</a></div>
+        </div>
+        <div class="js-contentPage contentpage-wrapper"></div>
+    </div>
+{% endblock content %}

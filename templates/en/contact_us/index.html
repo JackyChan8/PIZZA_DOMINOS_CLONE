@@ -1,0 +1,195 @@
+{% extends "base/base.html" %}
+{% block title %}Domino's Pizza, customerFeedback - Dominos.com{% endblock title %}
+
+{% block endHeader %}
+<link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.css"
+          media="all">
+<link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.desktop.css"
+          media="screen and (min-width: 641px)">
+<link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.fixed.css"
+          media="screen and (min-width: 60rem)">
+
+<link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/content-pages.css" media="all">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/content-pages.desktop.css"
+          media="screen and (min-width: 641px)">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/content-pages.fixed.css"
+          media="screen and (min-width: 60rem)">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/services.css"
+          media="all">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/services.desktop.css"
+          media="screen and (min-width: 641px)">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/services.fixed.css"
+          media="screen and (min-width: 60rem)">
+{% endblock endHeader %}
+
+{% block content %}
+<div id="pageContent" class="js-contentWrap content-wrap skeleton__content content-wrap--full-header">
+    <div class="progress-bar"></div>
+    <div class="js-customerServicesContainer customer-services__container">
+        <div class="customer-services js-customerServices"><h1>Email Us Using This Form</h1>
+            <form id="customerFeedback" method="POST" class="form form--stacked js-emailform" novalidate="novalidate">
+                {% csrf_token %}
+<!--                <div class="customer-services__required-fields-note">(*indicates required fields)</div>-->
+                <div class="card card--pop">
+                    <div class="card__body">
+                        <div class="form__control-group grid">
+                            <div class="grid__cell--1/2@desktop grid__cell--1">
+                                <div class="grid"><label for="ContactEmailCategory" class="grid__cell--1">E-Mail
+                                    Category:<strong class="red">*</strong></label> <select id="ContactEmailCategory"
+                                                                                            name="emailCategory"
+                                                                                            class="grid__cell--2/3@desktop grid__cell--1 js-email-category"
+                                                                                            required=""
+                                                                                            aria-required="true">
+                                    <option value="">- select -</option>
+                                    <option value="Concern">Concern</option>
+                                    <option value="Praise">Praise</option>
+                                    <option value="Question">Question</option>
+                                </select></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card--pop">
+                    <div class="card__body"><h2>About You</h2>
+                        <div class="form__control-group grid">
+                            <div class="grid__cell--1/2@desktop grid__cell--1">
+                                <div class="grid"><label for="FirstName" class="grid__cell--1">First Name<strong
+                                        class="red">*</strong></label> <input type="text" id="FirstName"
+                                                                              name="firstName" maxlength="40"
+                                                                              placeholder="First Name"
+                                                                              class="grid__cell--2/3@desktop grid__cell--1 js-firstName"
+                                                                              value="" required="" aria-required="true">
+                                </div>
+                            </div>
+                            <div class="grid__cell--1/2@desktop grid__cell--1">
+                                <div class="grid form__control-group"><label for="LastName" class="grid__cell--1">Last
+                                    Name <strong class="red">*</strong></label> <input type="text" id="LastName"
+                                                                                       name="lastName" maxlength="40"
+                                                                                       placeholder="Last Name"
+                                                                                       class="grid__cell--2/3@desktop grid__cell--1 js-lastName"
+                                                                                       value="" required=""
+                                                                                       aria-required="true"></div>
+                            </div>
+                        </div>
+                        <div class="form__control-group grid">
+                            <div class="grid__cell--1/2@desktop grid__cell--1">
+                                <div class="grid"><label for="Email" class="grid__cell--1">Email Address<strong
+                                        class="red">*</strong></label> <input type="email" id="Email" name="email"
+                                                                              maxlength="100"
+                                                                              placeholder="Email Address"
+                                                                              class="js-email grid__cell--2/3@desktop grid__cell--1 email"
+                                                                              value="" required="" aria-required="true">
+                                </div>
+                            </div>
+                            <div class="grid__cell--1/2@desktop grid__cell--1">
+                                <div class="grid"><label for="Confirm_Email" class="grid__cell--1">Confirm Email
+                                    Address:<strong class="red">*</strong></label> <input type="email"
+                                                                                          id="Confirm_Email"
+                                                                                          name="confirm_Email"
+                                                                                          maxlength="100"
+                                                                                          placeholder="Email Address"
+                                                                                          class="js-email grid__cell--2/3@desktop grid__cell--1 email js-email--confirmation"
+                                                                                          value="" required=""
+                                                                                          aria-required="true"></div>
+                            </div>
+                        </div>
+                        <div class="form__control-group grid" style="">
+                            <div class="grid__cell--1/2@desktop grid__cell--1">
+                                <div class="grid"><label for="Phone" class="grid__cell--1">Primary Phone Number <strong
+                                        class="red">*</strong></label> <input type="tel" id="PhonePrefix"
+                                                                              name="phonePrefix" maxlength="15"
+                                                                              placeholder="(297)" class=" js-country">
+                                    <input type="tel" id="Phone" name="phone" maxlength="8" placeholder=""
+                                           class="grid__cell--2/3@desktop grid__cell--1 js-phone" data-error-classes=""
+                                           value="" required="" aria-required="true"></div>
+                            </div>
+                            <div class="grid__cell--1/2@desktop grid__cell--1">
+                                <div class="grid"><label for="ContactMethod" class="grid__cell--1">Preferred Contact
+                                    Method<strong class="red">*</strong></label> <select id="ContactMethod"
+                                                                                         name="contactMethod"
+                                                                                         class="grid__cell--1/2 js-contactMethod"
+                                                                                         required=""
+                                                                                         aria-required="true">
+                                    <option value="">- select -</option>
+                                    <option value="Email">Email</option>
+                                    <option value="Phone">Phone</option>
+                                </select></div>
+                            </div>
+                        </div>
+                        <div class="form__control-group grid">
+                            <div class="grid__cell--1/2@desktop grid__cell--offset-1/2@desktop grid__cell--1">
+                                <div class="grid"><label for="ContactTime" class="grid__cell--1">Preferred Contact Time:<strong
+                                        class="red">*</strong></label> <select id="ContactTime" name="contactTime"
+                                                                               class="grid__cell--1/2 js-contactTime"
+                                                                               required="" aria-required="true">
+                                    <option value="">- select -</option>
+                                    <option value="Morning">Morning</option>
+                                    <option value="Afternoon">Afternoon</option>
+                                    <option value="Evening">Evening</option>
+                                    <option value="No Preference">No Preference</option>
+                                </select></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card--pop">
+                    <div class="card__body"><h2>Store you ordered from</h2>
+                        <div class="form__control-group grid" style="">
+                            <div class="grid__cell--1/2@desktop grid__cell--1">
+                                <div class="grid"><label for="storePhone" class="grid__cell--1">Store Phone
+                                    Number</label> <input type="text" id="storePhone" name="storePhone" maxlength="8"
+                                                          placeholder="Store Address"
+                                                          class="grid__cell--2/3@desktop grid__cell--1 js-phone"
+                                                          value=""></div>
+                            </div>
+                            <div class="grid__cell--1/2@desktop grid__cell--1">
+                                <div class="grid"><label for="StoreAddress" class="grid__cell--1 optional">Store
+                                    Address</label> <input type="text" id="StoreAddress" name="storeAddress"
+                                                           maxlength="100" placeholder="Store Address"
+                                                           class="grid__cell--2/3@desktop grid__cell--1 js-storeAddress"
+                                                           value=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card--pop">
+                    <div class="card__body"><h2>Comments</h2>
+                        <div class="form__control-group grid"><label for="Comment" class="grid__cell--1"><p>You may
+                            include any helpful details about your experience, such as the order number. Please do not
+                            include additional personal information (i.e. social security, credit card information,
+                            etc.) in the field below. The Dominos's Customer Care Team will contact you if additional
+                            information is required.<span><strong class="red">*</strong></span></p>
+                            <p>Maximum 1000 characters, you have <input type="text" name="counter"
+                                                                        class="js-counter character-counter grid__cell--1/8@desktop grid__cell--3/4"
+                                                                        value="1000" disabled=""> characters left.</p>
+                        </label> <textarea id="Comment" name="comments" rows="10" cols="50" maxlength="1000"
+                                           class="grid__cell--1 js-comment" required="" aria-required="true"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__control-group--actions grid">
+                    <div class="grid__cell--1/8">
+                        <button class="btn" type="submit" id="btn_submit"><span>Send</span></button>
+                    </div>
+                    <div class="grid__cell--1/8 grid__cell--offset-1/8 grid__cell--offset-0@desktop">
+                        <button class="btn" type="reset" id="btn_reset"><span>Clear</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block subheader %}
+<ul class="nav__sub-banner js-sub-banner" data-quid="sub-navigation">
+                <li id="" class="nav__menu-item"><a class="" href="{% url 'contact' %}" data-quid="">Contact
+                    Us</a></li>
+            </ul>
+{% endblock subheader %}

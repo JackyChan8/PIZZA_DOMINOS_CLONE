@@ -1,0 +1,219 @@
+{% extends "base/base.html" %}
+{% block title %}General Menu | Desserts - General Menu{% endblock title %}
+{% block endHeader %}
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.css"
+          media="all">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.desktop.css"
+          media="screen and (min-width: 641px)">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.fixed.css"
+          media="screen and (min-width: 60rem)">
+
+
+    <meta name="robots" content="follow, index, noodp">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/order.css"
+          media="all">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/order.desktop.css"
+          media="screen and (min-width: 641px)">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/order.fixed.css"
+          media="screen and (min-width: 60rem)">
+{% endblock endHeader %}
+{% block subheader %}
+<ul class="nav__sub-banner js-sub-banner" data-quid="sub-navigation">
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'menu' %}" data-quid="sub-navigation-see-all">See All</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'spec_pizza_page' %}" data-quid="entrees.specialtypizza-title">Specialty Pizza</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'sides_page' %}" data-quid="sub-navigation-sides">Sides</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'drinks_page' %}" data-quid="sub-navigation-drinks">Drinks</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'desserts_page' %}" data-quid="sub-navigation-desserts">Desserts</a></li>
+</ul>
+{% endblock subheader %}
+{% block content %}
+<div id="pageContent" style="margin-top: 7.8125rem;" class="js-contentWrap content-wrap skeleton__content content-wrap--full-header">
+    <div class="progress-bar"></div>
+    <div id="genericMenuPage" class="national-menu">
+        <div class="grid" itemtype="http://schema.org/Menu" itemscope="">
+            <link itemprop="url" href="./seeAll.html">
+
+            <div id="js-startYourOrder" class="js-startYourOrder grid__cell--1">
+                <div class="smart-order-generic" data-quid="smart-order-generic-content">
+                    <div class="grid">
+                        <div class="grid__cell--1/2@desktop grid__cell--1 smart-order-generic__header-container">
+                            <div class="smart-order-generic__heading">Start Your Order</div>
+                        </div>
+                        <div class="grid__cell--1/2@desktop grid__cell--1 smart-order-generic__ctas">
+                            <div class="smart-order-generic__cta-container"><a class="btn btn--delivery"
+                                                                               href="{% url 'order_online' %}?type=Delivery"
+                                                                               data-method="Delivery"
+                                                                               data-quid="smart-order-generic-delivery">Delivery</a>
+                            </div>
+                            <i class="smart-order-generic__or">or</i>
+                            <div class="smart-order-generic__cta-container"><a class="btn btn--carryout"
+                                                                               href="{% url 'order_online' %}?type=Carryout"
+                                                                               data-method="Carryout"
+                                                                               data-quid="smart-order-generic-carryout">Carryout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="grid__cell--1 main--heading js-mainHeading" data-quid="entrees-category-title" tabindex="-1"
+                aria-label="Domino's National Menu">Domino's National Menu</h1>
+
+            <div id="js-nationalMenuTxt" class="grid__cell--1">
+                <div class="grid">
+                    <div class="grid__cell--4/5@desktop grid__cell--1"><p class=" informationText"> This is the Domino's
+                        national menu. To see prices, coupons and exactly what items are available to you, <a
+                                href="#">select your local store</a>.</p></div>
+                    <div class="grid__cell--1 grid__cell--1/5@desktop"><p><a
+                            href="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/pdf/national_menu.pdf"
+                            download="" class="btn btn--block btn--secondary btn--download-menu"><span>Print Menu</span></a>
+                    </p></div>
+                </div>
+            </div>
+
+            <div id="js-categoryArea" class="grid__cell--1 national-menu__category-area">
+                <section class="card category category-order__1" itemprop="hasMenuSection"
+                         itemtype="http://schema.org/MenuSection" itemscope="">
+                    <header class="card__header js-scrollDessert">
+                        <div class="card__title"><span class="card__title--sub card__title--sub--right "> Pricing available when ordering </span>
+                            <h2 class="card__title--main" itemprop="name"> Dessert </h2></div>
+                    </header>
+                    <div class="products card__body grid">
+                        <meta itemprop="description" content="">
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Indulge in two delectable oven-baked chocolate cakes with molten chocolate fudge on the inside. Perfectly topped with a dash of powdered sugar.">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="F_LAVA"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_LAVA.jpg"
+                                    alt="Chocolate Lava Crunch Cakes Dessert - Indulge in two delectable oven-baked chocolate cakes with molten chocolate fudge on the inside. Perfectly topped with a dash of powdered sugar."
+                                    class="c-product-F_LAVA" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Chocolate Lava Crunch Cakes"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_LAVA">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_LAVA" data-quid="F_LAVA">Chocolate Lava Crunch
+                                Cakes</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Enjoy a warm order of sweet cinnamon and sugar oven-baked breadsticks. Drizzle on the included decadent icing with a hint of vanilla.">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_CINBRD"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_CINBRD.jpg"
+                                    alt="Cinna Stix® Dessert - Enjoy a warm order of sweet cinnamon and sugar oven-baked breadsticks. Drizzle on the included decadent icing with a hint of vanilla."
+                                    class="c-product-F_CINBRD" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Cinna Stix®"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_CINBRD">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_CINBRD" data-quid="F_CINBRD">Cinna Stix®</a></h3>
+                        </div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Satisfy your sweet tooth! Taste the decadent blend of gooey milk chocolate chunk cookie and delicious fudge brownie. Oven-baked to perfection and cut into 9 pieces - this dessert is perfect to share with the whole group.">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_MRBRWNE"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_MRBRWNE.jpg"
+                                    alt="Domino&amp;#x27;s Marbled Cookie Brownie™ Dessert - Satisfy your sweet tooth! Taste the decadent blend of gooey milk chocolate chunk cookie and delicious fudge brownie. Oven-baked to perfection and cut into 9 pieces - this dessert is perfect to share with the whole group."
+                                    class="c-product-F_MRBRWNE" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Domino's Marbled Cookie Brownie™"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_MRBRWNE">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_MRBRWNE" data-quid="F_MRBRWNE">Domino's Marbled
+                                Cookie Brownie™</a></h3></div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="js-optionsArea" class="grid__cell--1 is-hidden">
+                <div class="card card--pop options-footer">
+                    <div class="card__header"><h2 class="card__title">Available Options</h2></div>
+                    <div class="card__body">
+                        <div class="grid options-footer__border-bottom">
+                            <div class="grid__cell--1/3 options-footer__border-right"><h3
+                                    class="dominosColor1 js-nationalMenuOptionsHeader">Pizza Crusts (3)</h3>
+                                <ul>
+                                    <li>Hand Tossed</li>
+                                    <li>Crunchy Thin Crust</li>
+                                    <li>Handmade Pan</li>
+                                </ul>
+                            </div>
+                            <div class="grid__cell--1/3 options-footer__border-right"><h3
+                                    class="dominosColor1 js-nationalMenuOptionsHeader">Pizza Sizes (2)</h3>
+                                <ul>
+                                    <li>12" Medium</li>
+                                    <li>14" Large</li>
+                                </ul>
+                            </div>
+                            <div class="grid__cell--1/3"><h3 class="dominosColor1 js-nationalMenuOptionsHeader"
+                                                             data-quid="sauces">Sauces (1)</h3>
+                                <ul>
+                                    <li>Robust Inspired Tomato Sauce</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid option-footer__toppings-container">
+                            <div class="grid__cell--1/3"><h3 class="dominosColor1 js-nationalMenuOptionsHeader">Meats
+                                (8)</h3>
+                                <ul>
+                                    <li>Anchovies</li>
+                                    <li>BBQ Chicken</li>
+                                    <li>Bacon</li>
+                                    <li>Beef</li>
+                                    <li>Ham</li>
+                                    <li>Pepperoni</li>
+                                    <li>Premium Chicken</li>
+                                    <li>Sausage</li>
+                                </ul>
+                            </div>
+                            <div class="grid__cell--2/3"><h3 class="dominosColor1 js-nationalMenuOptionsHeader">
+                                Non-Meats (10)</h3>
+                                <div class="grid grid--no-gutter">
+                                    <div class="grid__cell--1">
+                                        <ul class="options-non-meats">
+                                            <li>Black Olives</li>
+                                            <li>Cheddar Cheese</li>
+                                            <li>Cheese</li>
+                                            <li>Diced Tomatoes</li>
+                                            <li>Green Pepper</li>
+                                            <li>Jalapeño</li>
+                                            <li>Mushrooms</li>
+                                            <li>Onions</li>
+                                            <li>Pineapple</li>
+                                            <li>Shredded Provolone</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

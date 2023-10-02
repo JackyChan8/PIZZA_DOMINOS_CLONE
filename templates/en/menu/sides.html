@@ -1,0 +1,544 @@
+{% extends "base/base.html" %}
+{% block title %}General Menu | Sides - General Menu{% endblock title %}
+{% block endHeader %}
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.css"
+          media="all">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.desktop.css"
+          media="screen and (min-width: 641px)">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.fixed.css"
+          media="screen and (min-width: 60rem)">
+
+
+    <meta name="robots" content="follow, index, noodp">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/order.css"
+          media="all">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/order.desktop.css"
+          media="screen and (min-width: 641px)">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/order.fixed.css"
+          media="screen and (min-width: 60rem)">
+{% endblock endHeader %}
+{% block subheader %}
+<ul class="nav__sub-banner js-sub-banner" data-quid="sub-navigation">
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'menu' %}" data-quid="sub-navigation-see-all">See All</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'spec_pizza_page' %}" data-quid="entrees.specialtypizza-title">Specialty Pizza</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'sides_page' %}" data-quid="sub-navigation-sides">Sides</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'drinks_page' %}" data-quid="sub-navigation-drinks">Drinks</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'desserts_page' %}" data-quid="sub-navigation-desserts">Desserts</a></li>
+</ul>
+{% endblock subheader %}
+{% block content %}
+<div id="pageContent" style="margin-top: 7.8125rem;" class="js-contentWrap content-wrap skeleton__content content-wrap--full-header">
+    <div class="progress-bar"></div>
+    <div id="genericMenuPage" class="national-menu">
+        <div class="grid" itemtype="http://schema.org/Menu" itemscope="">
+            <link itemprop="url" href="www.dominosaruba.com/en/pages/order/menu">
+
+            <div id="js-startYourOrder" class="js-startYourOrder grid__cell--1">
+                <div class="smart-order-generic" data-quid="smart-order-generic-content">
+                    <div class="grid">
+                        <div class="grid__cell--1/2@desktop grid__cell--1 smart-order-generic__header-container">
+                            <div class="smart-order-generic__heading">Start Your Order</div>
+                        </div>
+                        <div class="grid__cell--1/2@desktop grid__cell--1 smart-order-generic__ctas">
+                            <div class="smart-order-generic__cta-container"><a class="btn btn--delivery"
+                                                                               href="{% url 'order_online' %}?type=Delivery"
+                                                                               data-method="Delivery"
+                                                                               data-quid="smart-order-generic-delivery">Delivery</a>
+                            </div>
+                            <i class="smart-order-generic__or">or</i>
+                            <div class="smart-order-generic__cta-container"><a class="btn btn--carryout"
+                                                                               href="{% url 'order_online' %}?type=Carryout"
+                                                                               data-method="Carryout"
+                                                                               data-quid="smart-order-generic-carryout">Carryout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="grid__cell--1 main--heading js-mainHeading" data-quid="entrees-category-title" tabindex="-1"
+                aria-label="Domino's National Menu">Domino's National Menu</h1>
+
+            <div id="js-nationalMenuTxt" class="grid__cell--1">
+                <div class="grid">
+                    <div class="grid__cell--4/5@desktop grid__cell--1"><p class=" informationText"> This is the Domino's
+                        national menu. To see prices, coupons and exactly what items are available to you, <a
+                                href="#">select your local store</a>.</p></div>
+                    <div class="grid__cell--1 grid__cell--1/5@desktop"><p><a
+                            href="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/pdf/national_menu.pdf"
+                            download="" class="btn btn--block btn--secondary btn--download-menu"><span>Print Menu</span></a>
+                    </p></div>
+                </div>
+            </div>
+
+            <div id="js-categoryArea" class="grid__cell--1 national-menu__category-area">
+                <section class="card category category-order__1" itemprop="hasMenuSection"
+                         itemtype="http://schema.org/MenuSection" itemscope="">
+                    <header class="card__header js-scrollBread">
+                        <div class="card__title"><span class="card__title--sub card__title--sub--right "> Pricing available when ordering </span>
+                            <h2 class="card__title--main" itemprop="name"> Bread </h2></div>
+                    </header>
+                    <div class="products card__body grid">
+                        <meta itemprop="description" content="">
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Breadsticks baked to a golden brown, seasoned with a savory blend of garlic, Romano cheese and parsley. Served with a side of marinara.">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_TWISTBRD"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_TWISTBRD.jpg"
+                                    alt="Breadsticks Bread - Breadsticks baked to a golden brown, seasoned with a savory blend of garlic, Romano cheese and parsley. Served with a side of marinara."
+                                    class="c-product-F_TWISTBRD" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Breadsticks"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_TWISTBRD">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_TWISTBRD" data-quid="F_TWISTBRD">Breadsticks</a>
+                            </h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Taste the flavor of our oven baked, bite-size breadsticks lightly sprinkled with Parmesan-Asiago cheeses and seasoned with garlic and even more Parmesan. Perfectly delicious for sharing and dipping! Add Marinara or your favorite dipping cup for an additional charge.">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_PBITES"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_PBITES.jpg"
+                                    alt="Parmesan Bread Bites Bread - Taste the flavor of our oven baked, bite-size breadsticks lightly sprinkled with Parmesan-Asiago cheeses and seasoned with garlic and even more Parmesan. Perfectly delicious for sharing and dipping! Add Marinara or your favorite dipping cup for an additional charge."
+                                    class="c-product-F_PBITES" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Parmesan Bread Bites"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_PBITES">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_PBITES" data-quid="F_PBITES">Parmesan Bread
+                                Bites</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Oven baked breadsticks stuffed with cheese, smoked bacon &amp; jalapeno peppers - covered in a blend of cheese made with 100% Mozzarella and Cheddar Cheese. Seasoned with a sprinkling of garlic, parsley and Romano cheese. Add Marinara or your favorite dipping cup for an additional charge.">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="F_SBBRD"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_SBBRD.jpg"
+                                    alt="Stuffed Cheesy Bread with Bacon &amp; Jalapeno Bread - Oven baked breadsticks stuffed with cheese, smoked bacon &amp; jalapeno peppers - covered in a blend of cheese made with 100% Mozzarella and Cheddar Cheese. Seasoned with a sprinkling of garlic, parsley and Romano cheese. Add Marinara or your favorite dipping cup for an additional charge."
+                                    class="c-product-F_SBBRD" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Stuffed Cheesy Bread with Bacon &amp; Jalapeno"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_SBBRD">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SBBRD" data-quid="F_SBBRD">Stuffed Cheesy Bread
+                                with Bacon &amp; Jalapeno</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Indulge in cheesy perfection. Our oven-baked breadsticks are generously stuffed and covered with an exquisite blend of 100% Mozzarella and Cheddar Cheeses then seasoned with a sprinkling of garlic, parsley, and Romano cheese.">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="F_SCBRD"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_SCBRD.jpg"
+                                    alt="Stuffed Cheesy Bread Bread - Indulge in cheesy perfection. Our oven-baked breadsticks are generously stuffed and covered with an exquisite blend of 100% Mozzarella and Cheddar Cheeses then seasoned with a sprinkling of garlic, parsley, and Romano cheese."
+                                    class="c-product-F_SCBRD" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Stuffed Cheesy Bread"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_SCBRD">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SCBRD" data-quid="F_SCBRD">Stuffed Cheesy
+                                Bread</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Oven baked breadsticks stuffed with cheese &amp; smoked bacon - covered in a blend of cheese made with 100% Mozzarella and Cheddar Cheese. Seasoned with a sprinkling of garlic, parsley and Romano cheese. Add Marinara or your favorite dipping cup for an additional charge.">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="F_SCBRT"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_SCBRT.jpg"
+                                    alt="Stuffed Cheesy Bread with Bacon Bread - Oven baked breadsticks stuffed with cheese &amp; smoked bacon - covered in a blend of cheese made with 100% Mozzarella and Cheddar Cheese. Seasoned with a sprinkling of garlic, parsley and Romano cheese. Add Marinara or your favorite dipping cup for an additional charge."
+                                    class="c-product-F_SCBRT" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Stuffed Cheesy Bread with Bacon"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_SCBRT">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SCBRT" data-quid="F_SCBRT">Stuffed Cheesy Bread
+                                with Bacon</a></h3></div>
+                    </div>
+                </section>
+                <section class="card category category-order__2" itemprop="hasMenuSection"
+                         itemtype="http://schema.org/MenuSection" itemscope="">
+                    <header class="card__header js-scrollWings">
+                        <div class="card__title"><span class="card__title--sub card__title--sub--right "> Pricing available when ordering </span>
+                            <h2 class="card__title--main" itemprop="name"> Wings </h2></div>
+                    </header>
+                    <div class="products card__body grid">
+                        <meta itemprop="description" content="">
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Marinated and oven-baked with your choice of dipping sauce: Sweet Mango Habanero, BBQ, Kicker Hot Sauce, Blue Cheese or Ranch.">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="S_BONEIN"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/S_BONEIN.jpg"
+                                    alt="Wings Wings - Marinated and oven-baked with your choice of dipping sauce: Sweet Mango Habanero, BBQ, Kicker Hot Sauce, Blue Cheese or Ranch."
+                                    class="c-product-S_BONEIN" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Wings"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="S_BONEIN">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="S_BONEIN" data-quid="S_BONEIN">Wings</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Lightly breaded with savory herbs, made with 100% whole white breast meat. Customize with your choice of dipping sauce: Sweet Mango Habanero, BBQ, Kicker Hot Sauce, Blue Cheese or Ranch.">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="S_BONELESS"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/S_BONELESS.jpg"
+                                    alt="Boneless Chicken Wings - Lightly breaded with savory herbs, made with 100% whole white breast meat. Customize with your choice of dipping sauce: Sweet Mango Habanero, BBQ, Kicker Hot Sauce, Blue Cheese or Ranch."
+                                    class="c-product-S_BONELESS" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Boneless Chicken"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="S_BONELESS">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="S_BONELESS" data-quid="S_BONELESS">Boneless
+                                Chicken</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Tender bites of lightly breaded, 100% whole breast white meat chicken, topped with garlic parmesan white sauce, a blend of cheese made with mozzarella and cheddar, crispy bacon and tomato">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="S_CBT"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/S_CBT.jpg"
+                                    alt="Specialty Chicken – Crispy Bacon &amp; Tomato Wings - Tender bites of lightly breaded, 100% whole breast white meat chicken, topped with garlic parmesan white sauce, a blend of cheese made with mozzarella and cheddar, crispy bacon and tomato"
+                                    class="c-product-S_CBT" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Specialty Chicken – Crispy Bacon &amp; Tomato"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="S_CBT">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a href="{% url 'order_online' %}"
+                                                                        data-dpz-segment-track-event-name="Product Clicked"
+                                                                        data-dpz-segment-track-product="S_CBT"
+                                                                        data-quid="S_CBT">Specialty Chicken – Crispy
+                                Bacon &amp; Tomato</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Tender bites of lightly breaded, 100% whole breast white meat chicken, topped with classic hot buffalo sauce, ranch, a blend of cheese made with mozzarella and cheddar, and feta.">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="S_CHSC"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/S_CHSC.jpg"
+                                    alt="Specialty Chicken – Classic Hot Buffalo Wings - Tender bites of lightly breaded, 100% whole breast white meat chicken, topped with classic hot buffalo sauce, ranch, a blend of cheese made with mozzarella and cheddar, and feta."
+                                    class="c-product-S_CHSC" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Specialty Chicken – Classic Hot Buffalo"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="S_CHSC">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="S_CHSC" data-quid="S_CHSC">Specialty Chicken –
+                                Classic Hot Buffalo</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Tender bites of lightly breaded, 100% whole breast white meat chicken, topped with sweet and smoky BBQ sauce, a blend of cheese made with mozzarella and cheddar, and crispy bacon.">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="S_SBB"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/S_SBB.jpg"
+                                    alt="Specialty Chicken – Sweet BBQ Bacon Wings - Tender bites of lightly breaded, 100% whole breast white meat chicken, topped with sweet and smoky BBQ sauce, a blend of cheese made with mozzarella and cheddar, and crispy bacon."
+                                    class="c-product-S_SBB" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Specialty Chicken – Sweet BBQ Bacon"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="S_SBB">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a href="{% url 'order_online' %}"
+                                                                        data-dpz-segment-track-event-name="Product Clicked"
+                                                                        data-dpz-segment-track-product="S_SBB"
+                                                                        data-quid="S_SBB">Specialty Chicken – Sweet BBQ
+                                Bacon</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="Tender bites of lightly breaded, 100% whole breast white meat chicken, topped with sweet and spicy mango-habanero sauce, a blend of cheese made with mozzarella and cheddar, jalapeno and pineapple.">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="S_SJP"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/S_SJP.jpg"
+                                    alt="Specialty Chicken – Spicy Jalapeno - Pineapple Wings - Tender bites of lightly breaded, 100% whole breast white meat chicken, topped with sweet and spicy mango-habanero sauce, a blend of cheese made with mozzarella and cheddar, jalapeno and pineapple."
+                                    class="c-product-S_SJP" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Specialty Chicken – Spicy Jalapeno - Pineapple"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="S_SJP">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a href="{% url 'order_online' %}"
+                                                                        data-dpz-segment-track-event-name="Product Clicked"
+                                                                        data-dpz-segment-track-product="S_SJP"
+                                                                        data-quid="S_SJP">Specialty Chicken – Spicy
+                                Jalapeno - Pineapple</a></h3></div>
+                    </div>
+                </section>
+                <section class="card category category-order__3" itemprop="hasMenuSection"
+                         itemtype="http://schema.org/MenuSection" itemscope="">
+                    <header class="card__header js-scrollSides">
+                        <div class="card__title"><span class="card__title--sub card__title--sub--right "> Pricing available when ordering </span>
+                            <h2 class="card__title--main" itemprop="name"> Sides </h2></div>
+                    </header>
+                    <div class="products card__body grid">
+                        <meta itemprop="description" content="">
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description" content="A creamy dressing with bits of aged blue cheese">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="F_Bd"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_Bd.jpg"
+                                    alt="Blue Cheese Sides - A creamy dressing with bits of aged blue cheese"
+                                    class="c-product-F_Bd" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld" href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Blue Cheese"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_Bd">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a href="{% url 'order_online' %}"
+                                                                        data-dpz-segment-track-event-name="Product Clicked"
+                                                                        data-dpz-segment-track-product="F_Bd"
+                                                                        data-quid="F_Bd">Blue Cheese</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description" content="A smoky BBQ sauce with bold flavor">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="F_BBQC"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_BBQC.jpg"
+                                    alt="BBQ Sauce Sides - A smoky BBQ sauce with bold flavor" class="c-product-F_BBQC"
+                                    itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | BBQ Sauce"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_BBQC">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_BBQC" data-quid="F_BBQC">BBQ Sauce</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description" content="A perfect blend of sweet and spicy in one sauce">
+                            <div class="media__image productImage"><a href="{% url 'order_online' %}"
+                                                                      data-dpz-segment-track-event-name="Product Clicked"
+                                                                      data-dpz-segment-track-product="F_SMHAB"> <span
+                                    class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_SMHAB.jpg"
+                                    alt="Sweet Mango Habanero Sauce Sides - A perfect blend of sweet and spicy in one sauce"
+                                    class="c-product-F_SMHAB" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Sweet Mango Habanero Sauce"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_SMHAB">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SMHAB" data-quid="F_SMHAB">Sweet Mango Habanero
+                                Sauce</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description" content="Domino's own spicy Buffalo sauce">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_HOTCUP"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_HOTCUP.jpg"
+                                    alt="Kicker Hot Sauce Sides - Domino&amp;#x27;s own spicy Buffalo sauce"
+                                    class="c-product-F_HOTCUP" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Kicker Hot Sauce"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_HOTCUP">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_HOTCUP" data-quid="F_HOTCUP">Kicker Hot Sauce</a>
+                            </h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description" content="A thick sweet icing with a hint of vanilla">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SIDICE"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_SIDICE.jpg"
+                                    alt="Icing Dipping Sauce Sides - A thick sweet icing with a hint of vanilla"
+                                    class="c-product-F_SIDICE" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Icing Dipping Sauce"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_SIDICE">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SIDICE" data-quid="F_SIDICE">Icing Dipping
+                                Sauce</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="A sweet tomato sauce blended with garlic, basil and oregano">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SIDMAR"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_SIDMAR.jpg"
+                                    alt="Marinara Dipping Sauce Sides - A sweet tomato sauce blended with garlic, basil and oregano"
+                                    class="c-product-F_SIDMAR" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Marinara Dipping Sauce"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_SIDMAR">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SIDMAR" data-quid="F_SIDMAR">Marinara Dipping
+                                Sauce</a></h3></div>
+                        <div class="media media--photo media--photo--compact grid__cell--1/2 grid__cell--1/4@desktop"
+                             itemprop="hasMenuItem" itemtype="http://schema.org/MenuItem" itemscope="">
+                            <meta itemprop="description"
+                                  content="A creamy buttermilk ranch dressing with hints of garlic and onion">
+                            <div class="media__image productImage"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SIDRAN"> <span class="dogEar "></span> <img
+                                    src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/products/thumbnails/F_SIDRAN.jpg"
+                                    alt="Ranch Sides - A creamy buttermilk ranch dressing with hints of garlic and onion"
+                                    class="c-product-F_SIDRAN" itemprop="image"> </a></div>
+                            <a class="btn media__btn is-hidden@handheld"
+                               href="{% url 'order_online' %}"
+                               data-dpz-track-evt-name="Order | Ranch"
+                               data-dpz-segment-track-event-name="Product Clicked"
+                               data-dpz-segment-track-product="F_SIDRAN">Order Now</a>
+                            <h3 class="media__title" itemprop="name"><a
+                                    href="{% url 'order_online' %}"
+                                    data-dpz-segment-track-event-name="Product Clicked"
+                                    data-dpz-segment-track-product="F_SIDRAN" data-quid="F_SIDRAN">Ranch</a></h3></div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="js-optionsArea" class="grid__cell--1 is-hidden">
+                <div class="card card--pop options-footer">
+                    <div class="card__header"><h2 class="card__title">Available Options</h2></div>
+                    <div class="card__body">
+                        <div class="grid options-footer__border-bottom">
+                            <div class="grid__cell--1/3 options-footer__border-right"><h3
+                                    class="dominosColor1 js-nationalMenuOptionsHeader">Pizza Crusts (3)</h3>
+                                <ul>
+                                    <li>Hand Tossed</li>
+                                    <li>Crunchy Thin Crust</li>
+                                    <li>Handmade Pan</li>
+                                </ul>
+                            </div>
+                            <div class="grid__cell--1/3 options-footer__border-right"><h3
+                                    class="dominosColor1 js-nationalMenuOptionsHeader">Pizza Sizes (2)</h3>
+                                <ul>
+                                    <li>12" Medium</li>
+                                    <li>14" Large</li>
+                                </ul>
+                            </div>
+                            <div class="grid__cell--1/3"><h3 class="dominosColor1 js-nationalMenuOptionsHeader"
+                                                             data-quid="sauces">Sauces (1)</h3>
+                                <ul>
+                                    <li>Robust Inspired Tomato Sauce</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid option-footer__toppings-container">
+                            <div class="grid__cell--1/3"><h3 class="dominosColor1 js-nationalMenuOptionsHeader">Meats
+                                (8)</h3>
+                                <ul>
+                                    <li>Anchovies</li>
+                                    <li>BBQ Chicken</li>
+                                    <li>Bacon</li>
+                                    <li>Beef</li>
+                                    <li>Ham</li>
+                                    <li>Pepperoni</li>
+                                    <li>Premium Chicken</li>
+                                    <li>Sausage</li>
+                                </ul>
+                            </div>
+                            <div class="grid__cell--2/3"><h3 class="dominosColor1 js-nationalMenuOptionsHeader">
+                                Non-Meats (10)</h3>
+                                <div class="grid grid--no-gutter">
+                                    <div class="grid__cell--1">
+                                        <ul class="options-non-meats">
+                                            <li>Black Olives</li>
+                                            <li>Cheddar Cheese</li>
+                                            <li>Cheese</li>
+                                            <li>Diced Tomatoes</li>
+                                            <li>Green Pepper</li>
+                                            <li>Jalapeño</li>
+                                            <li>Mushrooms</li>
+                                            <li>Onions</li>
+                                            <li>Pineapple</li>
+                                            <li>Shredded Provolone</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,188 @@
+{% extends "base/base.html" %}
+{% block title %}Domino's Menu - Pizza, Pasta, Chicken, Sandwiches & More{% endblock title %}
+{% block endHeader %}
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.css"
+          media="all">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.desktop.css"
+          media="screen and (min-width: 641px)">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/screen.fixed.css"
+          media="screen and (min-width: 60rem)">
+    <meta name="robots" content="follow, index, noodp">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/order.css"
+          media="all">
+    <link rel="stylesheet" type="text/css"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/order.desktop.css"
+          media="screen and (min-width: 641px)">
+    <link rel="stylesheet" type="text/css" href="https://cache.dominos.com/olo/6_89_4/assets/build/css/order.fixed.css"
+          media="screen and (min-width: 60rem)">
+    <link rel="stylesheet" type="text/css"
+              href="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/css/override.min.css" media="all">
+    <link rel="stylesheet" type="text/css" charset="utf-8"
+          href="https://cache.dominos.com/olo/6_89_4/assets/build/css/smartbanner.css">
+{% endblock endHeader %}
+
+{% block subheader %}
+<ul class="nav__sub-banner js-sub-banner" data-quid="sub-navigation">
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'menu' %}" data-quid="sub-navigation-see-all">See All</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'spec_pizza_page' %}" data-quid="entrees.specialtypizza-title">Specialty Pizza</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'sides_page' %}" data-quid="sub-navigation-sides">Sides</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'drinks_page' %}" data-quid="sub-navigation-drinks">Drinks</a></li>
+    <li class="nav__menu-item"><a class="js-navigationLink" href="{% url 'desserts_page' %}" data-quid="sub-navigation-desserts">Desserts</a></li>
+</ul>
+{% endblock subheader %}
+
+{% block content %}
+<div id="pageContent" style="margin-top: 7.8125rem;" class="js-contentWrap content-wrap skeleton__content content-wrap--full-header">
+    <div class="progress-bar"></div>
+    <div id="genericMenuPage" class="national-menu">
+        <div class="grid" itemtype="http://schema.org/Menu" itemscope="">
+            <link itemprop="url" href="www.dominosaruba.com/en/pages/order/menu">
+
+            <div id="js-startYourOrder" class="js-startYourOrder grid__cell--1">
+                <div class="smart-order-generic" data-quid="smart-order-generic-content">
+                    <div class="grid">
+                        <div class="grid__cell--1/2@desktop grid__cell--1 smart-order-generic__header-container">
+                            <div class="smart-order-generic__heading">Start Your Order</div>
+                        </div>
+                        <div class="grid__cell--1/2@desktop grid__cell--1 smart-order-generic__ctas">
+                            <div class="smart-order-generic__cta-container"><a class="btn btn--delivery"
+                                                                               href="{% url 'order_online' %}?type=Delivery"
+                                                                               data-method="Delivery"
+                                                                               data-quid="smart-order-generic-delivery">Delivery</a>
+                            </div>
+                            <i class="smart-order-generic__or">or</i>
+                            <div class="smart-order-generic__cta-container"><a class="btn btn--carryout"
+                                                                               href="{% url 'order_online' %}?type=Carryout"
+                                                                               data-method="Carryout"
+                                                                               data-quid="smart-order-generic-carryout">Carryout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="grid__cell--1 main--heading js-mainHeading" data-quid="entrees-category-title" tabindex="-1"
+                aria-label="Domino's National Menu">Domino's National Menu</h1>
+
+            <div id="js-nationalMenuTxt" class="grid__cell--1">
+                <div class="grid">
+                    <div class="grid__cell--4/5@desktop grid__cell--1"><p class=" informationText"> This is the Domino's
+                        national menu. To see prices, coupons and exactly what items are available to you, <a
+                                href="#">select your local store</a>.</p></div>
+                    <div class="grid__cell--1 grid__cell--1/5@desktop"><p><a
+                            href="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/pdf/national_menu.pdf"
+                            download="" class="btn btn--block btn--secondary btn--download-menu"><span>Print Menu</span></a>
+                    </p></div>
+                </div>
+            </div>
+
+            <div id="js-categoryArea" class="grid__cell--1 national-menu__category-area">
+                <div class="card__body category-panel">
+                    <div class="media media--category-tile is-hidden@kiosk" id=""><a
+                            class="qa-Pizza grid c-order-entree-qa-Pizza grid" href="{% url 'spec_pizza_page' %}"
+                            data-wt-panelname="Pizza" data-quid="entree-Pizza">
+                        <div class="grid__cell grid__cell--1/5@desktop media__image"><img
+                                src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/entree-page/build.png"
+                                alt=""></div>
+                        <div class="grid__cell grid__cell--4/5@desktop media__body c-order-entrees-Pizza"><h2
+                                class="media__title" data-quid="entree-title-Pizza"> Specialty Pizza </h2></div>
+                    </a></div>
+                    <div class="media media--category-tile is-hidden@kiosk" id=""><a
+                            class="qa-sides grid c-order-entree-qa-sides grid" href="{% url 'sides_page' %}"
+                            data-wt-panelname="sides" data-quid="entree-sides">
+                        <div class="grid__cell grid__cell--1/5@desktop media__image"><img
+                                src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/entree-page/sides.png"
+                                alt=""></div>
+                        <div class="grid__cell grid__cell--4/5@desktop media__body c-order-entrees-sides"><h2
+                                class="media__title" data-quid="entree-title-sides"> Sides </h2></div>
+                    </a></div>
+                    <div class="media media--category-tile is-hidden@kiosk" id=""><a
+                            class="qa-drinks grid c-order-entree-qa-drinks grid" href="{% url 'drinks_page' %}"
+                            data-wt-panelname="Drinks" data-quid="entree-Drinks">
+                        <div class="grid__cell grid__cell--1/5@desktop media__image"><img
+                                src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/entree-page/drinks.png"
+                                alt=""></div>
+                        <div class="grid__cell grid__cell--4/5@desktop media__body c-order-entrees-Drinks"><h2
+                                class="media__title" data-quid="entree-title-Drinks"> Drinks </h2></div>
+                    </a></div>
+                    <div class="media media--category-tile is-hidden@kiosk" id=""><a
+                            class="qa-dessert grid c-order-entree-qa-dessert grid" href="{% url 'desserts_page' %}"
+                            data-wt-panelname="Desserts" data-quid="entree-Desserts">
+                        <div class="grid__cell grid__cell--1/5@desktop media__image"><img
+                                src="https://cache.dominos.com/olo/6_89_4/assets/build/market/AW/_en/images/img/entree-page/dessert.png"
+                                alt=""></div>
+                        <div class="grid__cell grid__cell--4/5@desktop media__body c-order-entrees-Desserts"><h2
+                                class="media__title" data-quid="entree-title-Desserts"> Desserts </h2></div>
+                    </a></div>
+                </div>
+            </div>
+
+            <div id="js-optionsArea" class="grid__cell--1 is-hidden">
+                <div class="card card--pop options-footer">
+                    <div class="card__header"><h2 class="card__title">Available Options</h2></div>
+                    <div class="card__body">
+                        <div class="grid options-footer__border-bottom">
+                            <div class="grid__cell--1/3 options-footer__border-right"><h3
+                                    class="dominosColor1 js-nationalMenuOptionsHeader">Pizza Crusts (3)</h3>
+                                <ul>
+                                    <li>Hand Tossed</li>
+                                    <li>Crunchy Thin Crust</li>
+                                    <li>Handmade Pan</li>
+                                </ul>
+                            </div>
+                            <div class="grid__cell--1/3 options-footer__border-right"><h3
+                                    class="dominosColor1 js-nationalMenuOptionsHeader">Pizza Sizes (2)</h3>
+                                <ul>
+                                    <li>12" Medium</li>
+                                    <li>14" Large</li>
+                                </ul>
+                            </div>
+                            <div class="grid__cell--1/3"><h3 class="dominosColor1 js-nationalMenuOptionsHeader"
+                                                             data-quid="sauces">Sauces (1)</h3>
+                                <ul>
+                                    <li>Robust Inspired Tomato Sauce</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid option-footer__toppings-container">
+                            <div class="grid__cell--1/3"><h3 class="dominosColor1 js-nationalMenuOptionsHeader">Meats
+                                (8)</h3>
+                                <ul>
+                                    <li>Anchovies</li>
+                                    <li>BBQ Chicken</li>
+                                    <li>Bacon</li>
+                                    <li>Beef</li>
+                                    <li>Ham</li>
+                                    <li>Pepperoni</li>
+                                    <li>Premium Chicken</li>
+                                    <li>Sausage</li>
+                                </ul>
+                            </div>
+                            <div class="grid__cell--2/3"><h3 class="dominosColor1 js-nationalMenuOptionsHeader">
+                                Non-Meats (10)</h3>
+                                <div class="grid grid--no-gutter">
+                                    <div class="grid__cell--1">
+                                        <ul class="options-non-meats">
+                                            <li>Black Olives</li>
+                                            <li>Cheddar Cheese</li>
+                                            <li>Cheese</li>
+                                            <li>Diced Tomatoes</li>
+                                            <li>Green Pepper</li>
+                                            <li>Jalapeño</li>
+                                            <li>Mushrooms</li>
+                                            <li>Onions</li>
+                                            <li>Pineapple</li>
+                                            <li>Shredded Provolone</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
